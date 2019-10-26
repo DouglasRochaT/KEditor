@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
 import cv2
-import numpy as np
 from matplotlib import pyplot as plt
 
 root = Tk()
@@ -17,7 +16,7 @@ class Application:
     def __init__(self, master=None):
         self.titulo = Frame(master)
         self.titulo.pack()
-        self.msg = Label(self.titulo, text= "Image Editor")
+        self.msg = Label(self.titulo, text = "Image Editor")
         self.msg["font"] = ("Verdana", "15", "bold")
         self.msg.pack()
 
@@ -25,22 +24,22 @@ class Application:
         self.cont1.pack()
         self.paths = Entry(self.cont1)
         self.paths["width"] = 50
-        self.paths["font"] = ("Verdana", "10")
-        self.paths.pack(side=LEFT)
+        self.paths["font"] = ("Comic Sans MS", "10")
+        self.paths.pack(side = LEFT)
         self.fonte = Button(self.cont1)
         self.fonte["text"] = "..."
         self.fonte["font"] = ("Calibri", "10")
         self.fonte["width"] = 5
         self.fonte.bind("<Button-1>",self.selecionarimagem)
-        self.fonte.pack (side=LEFT)
+        self.fonte.pack (side = LEFT)
 
         self.filtro = Frame(master)
         self.filtro.pack()
         self.tfiltro = Label(self.filtro, text='Filtro:')
-        self.tfiltro.pack(side=LEFT)
+        self.tfiltro.pack(side = LEFT)
         self.tfiltro["font"] = ("Calibri", "10", "bold")
         self.filtro = OptionMenu(self.filtro, var, *cmaps)
-        self.filtro.pack(side=TOP)
+        self.filtro.pack(side = TOP)
 
         self.widget4 = Frame(master)
         self.widget4.pack()

@@ -1,7 +1,7 @@
 # KEditor
-## A simple Python application to apply matplotlib filters to an image.
+## A simple Python application to apply matplotlib cmap`s to an image.
 
-Requires OpenCV, Matplotlib and NunPy:
->pip3 install numpy opencv-python matplotlib
+Requires OpenCV and Matplotlib:
+>pip3 install opencv-python matplotlib
 
 Also uses Tkinter
